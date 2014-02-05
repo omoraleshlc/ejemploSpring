@@ -1,1 +1,1 @@
-<% response.sendRedirect("agregarArticulos");%>
+<% response.sendRedirect("register");%>

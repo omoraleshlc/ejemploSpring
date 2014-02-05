@@ -23,7 +23,7 @@ public class ArticulosDaoImpl implements ArticulosDao {
 
 		jdbcTemplate.update(
 				sql,
-				new Object[] { articulos.getdescripcion(), articulos.getdescripcion1(),
+				new Object[] { articulos.getDescripcion(), articulos.getDescripcion1(),
 						articulos.getId() });
 
 	}
@@ -31,7 +31,7 @@ public class ArticulosDaoImpl implements ArticulosDao {
 	
         
         
-        
+        @Override
         public List<Articulos> getArticulosList() {
 		List articulosList = new ArrayList();
 
@@ -61,7 +61,7 @@ public class ArticulosDaoImpl implements ArticulosDao {
 
 		jdbcTemplate.update(
 				sql,
-				new Object[] { articulos.getdescripcion(), articulos.getdescripcion1(),
+				new Object[] { articulos.getDescripcion(), articulos.getDescripcion1(),
 						articulos.getId() });
 
 	}

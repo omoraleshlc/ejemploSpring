@@ -15,9 +15,10 @@ public class ArticulosExtractor implements ResultSetExtractor<Articulos> {
 		Articulos articulos = new Articulos();
 		
 		articulos.setId(resultSet.getInt(1));
-		articulos.setdescripcion(resultSet.getString(2));
-		articulos.setdescripcion1(resultSet.getString(3));
+		articulos.setDescripcion(resultSet.getString(2));
+		articulos.setDescripcion1(resultSet.getString(3));
 		
+                
 		
 		return articulos;
 	}

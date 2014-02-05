@@ -27,27 +27,15 @@ public class ArticulosController {
 	@RequestMapping("/registro")
 	public ModelAndView registerArticulos(@ModelAttribute Articulos articulos) {
 
-		List<String> genderList = new ArrayList<String>();
-		genderList.add("male");
-		genderList.add("female");
+		List<String> artList = new ArrayList<String>();
+		artList.add("descripcion");
+		
                 
-                List<String> estadoList = new ArrayList<String>();
-		estadoList.add("Nuevo Leon");
-		estadoList.add("Tamaulipas");
-		estadoList.add("Veracruz");
-		estadoList.add("Chiapas");
                 
-
-		List<String> cityList = new ArrayList<String>();
-		cityList.add("delhi");
-		cityList.add("gurgaon");
-		cityList.add("meerut");
-		cityList.add("noida");
 
 		Map<String, List> map = new HashMap<String, List>();
-		map.put("genderList", genderList);
-		map.put("cityList", cityList);
-                map.put("estadoList", estadoList);
+		map.put("descripcion", artList);
+		
 		return new ModelAndView("register", "map", map);
 	}
 
@@ -58,7 +46,7 @@ public class ArticulosController {
 		return "redirect:/getList";
 	}
 
-	@RequestMapping("/getLista")
+	@RequestMapping("/getListaArticulos")
 	public ModelAndView getArticulosList() {
 		List<Articulos> articulosList = articulosService.getArticulosList();
 		return new ModelAndView("articulosList", "articulosList", articulosList);

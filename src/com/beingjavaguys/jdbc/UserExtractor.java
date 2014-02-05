@@ -18,6 +18,7 @@ public class UserExtractor implements ResultSetExtractor<User> {
 		user.setLastName(resultSet.getString(3));
 		user.setGender(resultSet.getString(4));
 		user.setCity(resultSet.getString(5));
+                user.setEstado(resultSet.getString(6));
 		
 		return user;
 	}

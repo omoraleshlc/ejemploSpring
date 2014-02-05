@@ -31,7 +31,7 @@ td {
 </head>
 <body>
 	<center>
-		<br /> <br /> <br /> <b>Articulos
+		<br /> <br /> <br /> <b>Articuloses
 			Lista | </b><br /> <br />
 			
 		
@@ -43,7 +43,7 @@ td {
 				<td class="heading">Sustancia</td>
 				
 			</tr>
-			<c:forEach var="user" items="${articulosList}">
+			<c:forEach var="articulos" items="${articulosList}">
 				<tr>
 					<td>${articulos.Id}</td>
 					<td>${articulos.descripcion}</td>

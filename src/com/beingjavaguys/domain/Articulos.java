@@ -5,31 +5,52 @@ public class Articulos {
 	private int Id;
 	private String descripcion;
 	private String descripcion1;
-	
 
-	public int getId() {
-		return Id;
-	}
+    /**
+     * @return the Id
+     */
+    public int getId() {
+        return Id;
+    }
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+    /**
+     * @param Id the Id to set
+     */
+    
+    public void setId(int Id) {
+        this.Id = Id;
+    }
 
-	public String getdescripcion() {
-		return descripcion;
-	}
-        
-        public void setdescripcion(String descripcion) {
+    /**
+     * @return the descripcion
+     */
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    /**
+     * @param descripcion the descripcion to set
+     */
+    public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
-	}
-        
-        public String getdescripcion1() {
-        return descripcion1;
-	}
+    }
 
-	public void setdescripcion1(String descripcion1) {
-		this.descripcion1 = descripcion1;
-	}
+    /**
+     * @return the descripcion1
+     */
+    public String getDescripcion1() {
+        return descripcion1;
+    }
+
+    /**
+     * @param descripcion1 the descripcion1 to set
+     */
+    public void setDescripcion1(String descripcion1) {
+        this.descripcion1 = descripcion1;
+    }
+	
+    
+	
 
 	
 }
