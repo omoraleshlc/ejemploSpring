@@ -38,19 +38,19 @@ td {
 
 		<table border="1">
 			<tr>
-				<td class="heading">Id</td>
+				<td class="heading">#Mov</td>
 				<td class="heading">Descripcion</td>
 				<td class="heading">Sustancia</td>
 				
 			</tr>
 			<c:forEach var="articulos" items="${articulosList}">
 				<tr>
-					<td>${articulos.Id}</td>
+					<td>${articulos.keyPA}</td>
 					<td>${articulos.descripcion}</td>
 					<td>${articulos.descripcion1}</td>
 					
-					<td><a href="edit?id=${articulos.Id}">Editar</a></td>
-					<td><a href="delete?id=${articulos.Id}">Eliminar</a></td>
+					<td><a href="edit?id=${articulos.keyPA}">Editar</a></td>
+					<td><a href="delete?id=${articulos.keyPA}">Eliminar</a></td>
 				</tr>
 			</c:forEach>
 			<tr><td colspan="7"><a href="register">Agregar New Articulos</a></td></tr>

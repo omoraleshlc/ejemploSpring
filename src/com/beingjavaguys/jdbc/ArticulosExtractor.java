@@ -13,8 +13,7 @@ public class ArticulosExtractor implements ResultSetExtractor<Articulos> {
 			DataAccessException {
 		
 		Articulos articulos = new Articulos();
-		
-		articulos.setId(resultSet.getInt(1));
+		articulos.setKeyPA(resultSet.getInt(1));		
 		articulos.setDescripcion(resultSet.getString(2));
 		articulos.setDescripcion1(resultSet.getString(3));
 		

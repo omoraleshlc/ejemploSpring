@@ -24,7 +24,7 @@ public class ArticulosDaoImpl implements ArticulosDao {
 		jdbcTemplate.update(
 				sql,
 				new Object[] { articulos.getDescripcion(), articulos.getDescripcion1(),
-						articulos.getId() });
+						articulos.getKeyPA() });
 
 	}
 
@@ -62,7 +62,7 @@ public class ArticulosDaoImpl implements ArticulosDao {
 		jdbcTemplate.update(
 				sql,
 				new Object[] { articulos.getDescripcion(), articulos.getDescripcion1(),
-						articulos.getId() });
+						articulos.getKeyPA() });
 
 	}
 

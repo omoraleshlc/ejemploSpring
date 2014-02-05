@@ -2,25 +2,27 @@ package com.beingjavaguys.domain;
 
 public class Articulos {
 
-	private int Id;
+	private Integer keyPA;
 	private String descripcion;
 	private String descripcion1;
 
+
+  
     /**
-     * @return the Id
+     * @return the keyPA
      */
-    public int getId() {
-        return Id;
+    public Integer getKeyPA() {
+        return keyPA;
     }
 
     /**
-     * @param Id the Id to set
+     * @param keyPA the keyPA to set
      */
-    
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setKeyPA(Integer keyPA) {
+        this.keyPA = keyPA;
     }
-
+	      
+        
     /**
      * @return the descripcion
      */
@@ -48,7 +50,7 @@ public class Articulos {
     public void setDescripcion1(String descripcion1) {
         this.descripcion1 = descripcion1;
     }
-	
+
     
 	
 
