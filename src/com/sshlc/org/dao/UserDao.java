@@ -1,7 +1,7 @@
-package com.beingjavaguys.dao;
+package com.sshlc.org.dao;
 
 import java.util.List;
-import com.beingjavaguys.domain.User;
+import com.sshlc.org.domain.User;
 
 public interface UserDao {
 	public void insertData(User user);

@@ -1,10 +1,10 @@
-package com.beingjavaguys.services;
+package com.sshlc.org.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import com.beingjavaguys.dao.ArticulosDao;
-import com.beingjavaguys.domain.Articulos;
+import com.sshlc.org.dao.ArticulosDao;
+import com.sshlc.org.domain.Articulos;
 
 
 public class ArticulosServiceImpl implements ArticulosService {

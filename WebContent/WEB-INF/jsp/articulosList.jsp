@@ -49,8 +49,8 @@ td {
 					<td>${articulos.descripcion}</td>
 					<td>${articulos.descripcion1}</td>
 					
-					<td><a href="edit?id=${articulos.keyPA}">Editar</a></td>
-					<td><a href="delete?id=${articulos.keyPA}">Eliminar</a></td>
+					<td><a href="editar?keyPA=${articulos.keyPA}">Editar</a></td>
+					<td><a href="delete?keyPA=${articulos.keyPA}">Eliminar</a></td>
 				</tr>
 			</c:forEach>
 			<tr><td colspan="7"><a href="register">Agregar New Articulos</a></td></tr>

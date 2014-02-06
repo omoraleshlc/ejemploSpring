@@ -1,12 +1,12 @@
-package com.beingjavaguys.dao;
+package com.sshlc.org.dao;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import com.beingjavaguys.domain.Alumnos;
-import com.beingjavaguys.jdbc.AlumnosRowMapper;
+import com.sshlc.org.domain.Alumnos;
+import com.sshlc.org.jdbc.AlumnosRowMapper;
 
 public class AlumnosDaoImpl implements AlumnosDao {
 

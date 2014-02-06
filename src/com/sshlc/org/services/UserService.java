@@ -1,8 +1,8 @@
-package com.beingjavaguys.services;
+package com.sshlc.org.services;
 
 import java.util.List;
 
-import com.beingjavaguys.domain.User;
+import com.sshlc.org.domain.User;
 
 public interface UserService {
 	public void insertData(User user);

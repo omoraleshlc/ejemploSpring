@@ -1,10 +1,10 @@
-package com.beingjavaguys.services;
+package com.sshlc.org.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import com.beingjavaguys.dao.AlumnosDao;
-import com.beingjavaguys.domain.Alumnos;
+import com.sshlc.org.dao.AlumnosDao;
+import com.sshlc.org.domain.Alumnos;
 
 
 public class AlumnosServiceImpl implements AlumnosService {

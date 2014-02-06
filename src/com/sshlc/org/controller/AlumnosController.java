@@ -1,4 +1,4 @@
-package com.beingjavaguys.controller;
+package com.sshlc.org.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import com.beingjavaguys.domain.Alumnos;
-import com.beingjavaguys.services.AlumnosService;
+import com.sshlc.org.domain.Alumnos;
+import com.sshlc.org.services.AlumnosService;
 
 @Controller
 public class AlumnosController {

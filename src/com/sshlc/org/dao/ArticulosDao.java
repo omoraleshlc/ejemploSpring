@@ -1,7 +1,7 @@
-package com.beingjavaguys.dao;
+package com.sshlc.org.dao;
 
 import java.util.List;
-import com.beingjavaguys.domain.Articulos;
+import com.sshlc.org.domain.Articulos;
 
 public interface ArticulosDao {
 	public void insertData(Articulos articulos);

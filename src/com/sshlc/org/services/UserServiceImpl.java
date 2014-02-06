@@ -1,10 +1,10 @@
-package com.beingjavaguys.services;
+package com.sshlc.org.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import com.beingjavaguys.dao.UserDao;
-import com.beingjavaguys.domain.User;
+import com.sshlc.org.dao.UserDao;
+import com.sshlc.org.domain.User;
 
 
 public class UserServiceImpl implements UserService {

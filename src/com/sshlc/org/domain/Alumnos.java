@@ -1,4 +1,4 @@
-package com.beingjavaguys.domain;
+package com.sshlc.org.domain;
 
 public class Alumnos {
 

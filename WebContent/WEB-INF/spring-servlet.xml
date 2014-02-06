@@ -11,7 +11,7 @@
 	<context:annotation-config />
 
 	<!-- declaring base package -->
-	<context:component-scan base-package="com.beingjavaguys" />
+	<context:component-scan base-package="com.sshlc.org" />
 
 	<!-- adding view resolver to show jsp's on browser -->
 	<bean id="viewResolver"
@@ -21,12 +21,12 @@
 	</bean>
 
 	<!-- declare beans -->
-	<bean id="userDao" class="com.beingjavaguys.dao.UserDaoImpl" />
-	<bean id="userService" class="com.beingjavaguys.services.UserServiceImpl" />
-        <bean id="articulosDao" class="com.beingjavaguys.dao.ArticulosDaoImpl" />
-	<bean id="articulosService" class="com.beingjavaguys.services.ArticulosServiceImpl" />
-        <bean id="alumnosDao" class="com.beingjavaguys.dao.AlumnosDaoImpl" />
-	<bean id="alumnosService" class="com.beingjavaguys.services.AlumnosServiceImpl" />
+	<bean id="userDao" class="com.getListaArticulos.dao.UserDaoImpl" />
+	<bean id="userService" class="com.getListaArticulos.services.UserServiceImpl" />
+        <bean id="articulosDao" class="com.getListaArticulos.dao.ArticulosDaoImpl" />
+	<bean id="articulosService" class="com.getListaArticulos.services.ArticulosServiceImpl" />
+        <bean id="alumnosDao" class="com.getListaArticulos.dao.AlumnosDaoImpl" />
+	<bean id="alumnosService" class="com.getListaArticulos.services.AlumnosServiceImpl" />
 
 	<!-- declare datasource bean -->
 	<bean id="dataSource"

@@ -1,10 +1,10 @@
-package com.beingjavaguys.jdbc;
+package com.sshlc.org.jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
-import com.beingjavaguys.domain.Alumnos;
+import com.sshlc.org.domain.Alumnos;
 
 public class AlumnosExtractor implements ResultSetExtractor<Alumnos> {
 

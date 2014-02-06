@@ -1,11 +1,11 @@
-package com.beingjavaguys.jdbc;
+package com.sshlc.org.jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.beingjavaguys.domain.User;
+import com.sshlc.org.domain.User;
 
 public class UserRowMapper implements RowMapper<User> {
 

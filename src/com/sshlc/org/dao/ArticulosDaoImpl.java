@@ -1,12 +1,12 @@
-package com.beingjavaguys.dao;
+package com.sshlc.org.dao;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import com.beingjavaguys.domain.Articulos;
-import com.beingjavaguys.jdbc.ArticulosRowMapper;
+import com.sshlc.org.domain.Articulos;
+import com.sshlc.org.jdbc.ArticulosRowMapper;
 
 public class ArticulosDaoImpl implements ArticulosDao {
 

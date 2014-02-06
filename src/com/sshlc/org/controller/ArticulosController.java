@@ -1,4 +1,4 @@
-package com.beingjavaguys.controller;
+package com.sshlc.org.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import com.beingjavaguys.domain.Articulos;
-import com.beingjavaguys.services.ArticulosService;
+import com.sshlc.org.domain.Articulos;
+import com.sshlc.org.services.ArticulosService;
 
 @Controller
 public class ArticulosController {
@@ -53,10 +53,10 @@ public class ArticulosController {
 	}
 
 	@RequestMapping("/editar")
-	public ModelAndView editArticulos(@RequestParam String id,
+	public ModelAndView editArticulos(@RequestParam String keyPA,
 			@ModelAttribute Articulos articulos) {
 
-		articulos = articulosService.getArticulos(id);
+		articulos = articulosService.getArticulos(keyPA);
 
 		List<String> genderList = new ArrayList<String>();
 		genderList.add("male");
@@ -82,7 +82,7 @@ public class ArticulosController {
 		map.put("articulos", articulos);
                 map.put("estado", estadoList);
 
-		return new ModelAndView("edit", "map", map);
+		return new ModelAndView("editar", "map", map);
 
 	}
 

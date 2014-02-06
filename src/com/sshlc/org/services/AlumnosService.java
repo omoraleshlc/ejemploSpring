@@ -1,17 +1,17 @@
-package com.beingjavaguys.dao;
+package com.sshlc.org.services;
 
 import java.util.List;
-import com.beingjavaguys.domain.Alumnos;
 
-public interface AlumnosDao {
+import com.sshlc.org.domain.Alumnos;
+
+public interface AlumnosService {
 	public void insertData(Alumnos alumnos);
 
 	public List<Alumnos> getAlumnosList();
-
-	public void updateData(Alumnos alumnos);
 
 	public void deleteData(String keyAEMain);
 
 	public Alumnos getAlumnos(String keyAEMain);
 
+	public void updateData(Alumnos alumnos);
 }
