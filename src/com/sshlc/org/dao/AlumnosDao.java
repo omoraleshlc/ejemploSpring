@@ -10,8 +10,8 @@ public interface AlumnosDao {
 
 	public void updateData(Alumnos alumnos);
 
-	public void deleteData(String keyAEMain);
+	public void deleteData(Integer keyAEMain);
 
-	public Alumnos getAlumnos(String keyAEMain);
+	public Alumnos getAlumnos(Integer keyAEMain);
 
 }

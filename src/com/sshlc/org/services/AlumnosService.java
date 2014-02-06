@@ -9,9 +9,9 @@ public interface AlumnosService {
 
 	public List<Alumnos> getAlumnosList();
 
-	public void deleteData(String keyAEMain);
+	public void deleteData(Integer keyAEMain);
 
-	public Alumnos getAlumnos(String keyAEMain);
+	public Alumnos getAlumnos(Integer keyAEMain);
 
 	public void updateData(Alumnos alumnos);
 }

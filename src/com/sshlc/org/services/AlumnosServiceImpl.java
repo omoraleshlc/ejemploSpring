@@ -23,13 +23,13 @@ public class AlumnosServiceImpl implements AlumnosService {
 	}
 
 	@Override
-	public void deleteData(String keyAEMain) {
+	public void deleteData(Integer keyAEMain) {
 		alumnosdao.deleteData(keyAEMain);
 		
 	}
 
 	@Override
-	public Alumnos getAlumnos(String keyAEMain) {
+	public Alumnos getAlumnos(Integer keyAEMain) {
 		return alumnosdao.getAlumnos(keyAEMain);
 	}
 

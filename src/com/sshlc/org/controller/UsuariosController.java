@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import com.sshlc.org.domain.User;
-import com.sshlc.org.services.UserService;
+import com.sshlc.org.domain.Usuarios;
+import com.sshlc.org.services.UsuariosService;
 
 @Controller
-public class HomePageController {
+public class UsuariosController {
 
 	@Autowired
-	UserService userService;
+	UsuariosService usuariosService;
         
         
         
@@ -25,7 +25,7 @@ public class HomePageController {
         
 
 	@RequestMapping("/register")
-	public ModelAndView registerUser(@ModelAttribute User user) {
+	public ModelAndView registerUsuarios(@ModelAttribute Usuarios usuarios) {
 
 		List<String> genderList = new ArrayList<String>();
 		genderList.add("male");
@@ -52,23 +52,23 @@ public class HomePageController {
 	}
 
 	@RequestMapping("/insert")
-	public String inserData(@ModelAttribute User user) {
-		if (user != null)
-			userService.insertData(user);
+	public String inserData(@ModelAttribute Usuarios usuarios) {
+		if (usuarios != null)
+			usuariosService.insertData(usuarios);
 		return "redirect:/getList";
 	}
 
 	@RequestMapping("/getList")
-	public ModelAndView getUserLIst() {
-		List<User> userList = userService.getUserList();
-		return new ModelAndView("userList", "userList", userList);
+	public ModelAndView getUsuariosLIst() {
+		List<Usuarios> usuariosList = usuariosService.getUsuariosList();
+		return new ModelAndView("usuariosList", "usuariosList", usuariosList);
 	}
 
-	@RequestMapping("/edit")
-	public ModelAndView editUser(@RequestParam String id,
-			@ModelAttribute User user) {
+	@RequestMapping("/editarUsuario")
+	public ModelAndView editUsuarios(@RequestParam int folio,
+			@ModelAttribute Usuarios usuarios) {
 
-		user = userService.getUser(id);
+		usuarios = usuariosService.getUsuarios(folio);
 
 		List<String> genderList = new ArrayList<String>();
 		genderList.add("male");
@@ -91,24 +91,24 @@ public class HomePageController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("genderList", genderList);
 		map.put("cityList", cityList);
-		map.put("user", user);
+		map.put("usuarios", usuarios);
                 map.put("estado", estadoList);
 
-		return new ModelAndView("edit", "map", map);
+		return new ModelAndView("editarUsuario", "map", map);
 
 	}
 
-	@RequestMapping("/update")
-	public String updateUser(@ModelAttribute User user) {
-		userService.updateData(user);
+	@RequestMapping("/actualizarUsuario")
+	public String updateUsuarios(@ModelAttribute Usuarios usuarios) {
+		usuariosService.updateData(usuarios);
 		return "redirect:/getList";
 
 	}
 
 	@RequestMapping("/delete")
-	public String deleteUser(@RequestParam String id) {
-		System.out.println("id = " + id);
-		userService.deleteData(id);
+	public String deleteUsuarios(@RequestParam int folio) {
+		System.out.println("folio = " + folio);
+		usuariosService.deleteData(folio);
 		return "redirect:/getList";
 	}
 }

@@ -13,29 +13,19 @@
 		<br /> <br /> <br /> <h1 class="jumbotron">Being Java Guys | Registration Form </h1> <br />
 		<br />
 		<div>
-			<form:form method="post" action="/insert" modelAttribute="user">
+			<form:form method="post" action="/insert" modelAttribute="usuarios">
 				<table class="table table-condensed table-hover">
 					<tr>
-						<td>First Name :</td>
-						<td><form:input path="firstName" /></td>
+						<td>Folio :</td>
+						<td><form:input path="folio" /></td>
 					</tr>
 					<tr>
-						<td>Last Name :</td>
-						<td><form:input path="lastName" /></td>
+						<td>Usuario :</td>
+						<td><form:input path="usuario" /></td>
 					</tr>
 					<tr>
-						<td>Gender :</td>
-						<td><form:radiobuttons path="gender"
-								items="${map.genderList}" /></td>
-					</tr>
-					<tr>
-						<td>City :</td>
-						<td><form:select path="city" items="${map.cityList}" /></td>
-					</tr>
-                                        
-                                        <tr>
-						<td>Estado :</td>
-						<td><form:select path="estado" items="${map.estadoList}" /></td>
+						<td>Nombre:</td>
+						<td><form:input path="nombre" /></td>
 					</tr>
                                         
 					<tr>

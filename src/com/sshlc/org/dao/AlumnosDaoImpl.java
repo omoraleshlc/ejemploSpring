@@ -46,7 +46,7 @@ public class AlumnosDaoImpl implements AlumnosDao {
         
         
         @Override
-	public void deleteData(String keyAEMain) {
+	public void deleteData(Integer keyAEMain) {
 		String sql = "delete from alumnos where keyAEMain=" + keyAEMain;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		jdbcTemplate.update(sql);
@@ -67,7 +67,7 @@ public class AlumnosDaoImpl implements AlumnosDao {
 	}
 
 	@Override
-	public Alumnos getAlumnos(String keyAEMain) {
+	public Alumnos getAlumnos(Integer keyAEMain) {
 		List<Alumnos> alumnosList = new ArrayList<Alumnos>();
 		String sql = "select * from alumnos where keyAEMain= " + keyAEMain;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);

@@ -63,7 +63,7 @@ public class AlumnosController {
 	}
 
 	@RequestMapping("/editarAlumnos")
-	public ModelAndView editAlumnos(@RequestParam String keyAEMain,
+	public ModelAndView editAlumnos(@RequestParam Integer keyAEMain,
 			@ModelAttribute Alumnos alumnos) {
 
 		alumnos = alumnosService.getAlumnos(keyAEMain);
@@ -104,9 +104,9 @@ public class AlumnosController {
 	}
 
 	@RequestMapping("/borraAlumnos")
-	public String deleteAlumnos(@RequestParam String id) {
-		System.out.println("id = " + id);
-		alumnosService.deleteData(id);
+	public String deleteAlumnos(@RequestParam Integer keyAEMain) {
+		System.out.println("keyAEMain = " + keyAEMain);
+		alumnosService.deleteData(keyAEMain);
 		return "redirect:/getListaAlumnos";
 	}
 }

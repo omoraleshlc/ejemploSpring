@@ -21,12 +21,13 @@
 	</bean>
 
 	<!-- declare beans -->
-	<bean id="userDao" class="com.getListaArticulos.dao.UserDaoImpl" />
-	<bean id="userService" class="com.getListaArticulos.services.UserServiceImpl" />
-        <bean id="articulosDao" class="com.getListaArticulos.dao.ArticulosDaoImpl" />
-	<bean id="articulosService" class="com.getListaArticulos.services.ArticulosServiceImpl" />
-        <bean id="alumnosDao" class="com.getListaArticulos.dao.AlumnosDaoImpl" />
-	<bean id="alumnosService" class="com.getListaArticulos.services.AlumnosServiceImpl" />
+	<bean id="usuariosDao" class="com.sshlc.org.dao.UsuariosDaoImpl" />	
+        <bean id="articulosDao" class="com.sshlc.org.dao.ArticulosDaoImpl" />	
+        <bean id="alumnosDao" class="com.sshlc.org.dao.AlumnosDaoImpl" />
+        
+        <bean id="usuariosService" class="com.sshlc.org.services.UsuariosServiceImpl" />
+	<bean id="alumnosService" class="com.sshlc.org.services.AlumnosServiceImpl" />
+        <bean id="articulosService" class="com.sshlc.org.services.ArticulosServiceImpl" />
 
 	<!-- declare datasource bean -->
 	<bean id="dataSource"

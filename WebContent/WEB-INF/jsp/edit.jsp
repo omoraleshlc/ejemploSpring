@@ -32,17 +32,17 @@ td {
 	<center>
 		<br /> <br /> <br /> <b>Edit User Details </b><br /> <br />
 		<div>
-			<form:form method="post" action="/update" modelAttribute="user">
+			<form:form method="post" action="/update" modelAttribute="usuarios">
 				<table>
 					<tr>
 						<td>First Name :</td>
-						<td><form:input path="firstName"
-								value="${map.user.firstName}" />
+						<td><form:input path="usuario"
+								value="${map.usuarios.usuario}" />
 						</td>
 					</tr>
 					<tr>
 						<td>Last Name :</td>
-						<td><form:input path="lastName" value="${map.user.lastName}" />
+						<td><form:input path="usuario" value="${map.usuarios.nombre}" />
 						</td>
 					</tr>
 					<tr>
