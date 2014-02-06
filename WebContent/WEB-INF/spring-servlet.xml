@@ -25,6 +25,8 @@
 	<bean id="userService" class="com.beingjavaguys.services.UserServiceImpl" />
         <bean id="articulosDao" class="com.beingjavaguys.dao.ArticulosDaoImpl" />
 	<bean id="articulosService" class="com.beingjavaguys.services.ArticulosServiceImpl" />
+        <bean id="alumnosDao" class="com.beingjavaguys.dao.AlumnosDaoImpl" />
+	<bean id="alumnosService" class="com.beingjavaguys.services.AlumnosServiceImpl" />
 
 	<!-- declare datasource bean -->
 	<bean id="dataSource"
