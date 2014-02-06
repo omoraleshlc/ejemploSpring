@@ -8,7 +8,7 @@ public interface UsuariosDao {
 
 	public List<Usuarios> getUsuariosList();
 
-	public void updateData(Integer folio);
+	public void updateData(Usuarios usuarios);
 
 	public void deleteData(Integer folio);
 

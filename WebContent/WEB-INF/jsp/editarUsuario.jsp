@@ -33,13 +33,7 @@ td {
 		<br /> <br /> <br /> <b>Edit User Details </b><br /> <br />
 		<div>
 			<form:form method="post" action="/actualizarUsuario" modelAttribute="usuarios">
-				<table>
-					<tr>
-						<td>Folio :</td>
-						<td><form:input path="usuario"
-								value="${map.usuarios.folio}" />
-						</td>
-					</tr>
+				<table>					
 					<tr>
 						<td>Usuario :</td>
 						<td><form:input path="usuario" value="${map.usuarios.usuario}" />
@@ -48,7 +42,7 @@ td {
 					
                                         	<tr>
 						<td>Nombre :</td>
-						<td><form:input path="usuario" value="${map.usuarios.nombre}" />
+						<td><form:input path="nombre" value="${map.usuarios.nombre}" />
 						</td>
 					</tr>
                                         

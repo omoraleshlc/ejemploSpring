@@ -48,21 +48,17 @@ public class UsuariosDaoImpl implements UsuariosDao {
 	}
 
 	@Override
-	public void updateData(Integer folio) {
-            
-                List<Usuarios> usuariosList = new ArrayList<Usuarios>();
-                String sql = "select * from usuarios where folio= " + folio;
+	public void updateData(Usuarios usuarios) {
+                Integer folio=usuarios.getFolio();
+                //List<Usuarios> usuariosList = new ArrayList<Usuarios>();
+                
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		usuariosList = jdbcTemplate.query(sql, new UsuariosRowMapper());
+		String sql = "UPDATE usuarios set usuario = ?,nombre = ? where folio= " + folio;
+    	
                 
-                
-		String sql1 = "UPDATE usuarios set usuario = ?,nombre = ? where folio= " + folio;
-                System.out.println(sql1);
-		JdbcTemplate jdbcTemplate1 = new JdbcTemplate(dataSource);
-                
-		jdbcTemplate1.update(
-				sql1,
-				new Object[] { usuariosList.get(1), usuariosList.get(2),
+		jdbcTemplate.update(
+				sql,
+				new Object[] { usuarios.getUsuario(), usuarios.getNombre()
                                      
 						});
 
