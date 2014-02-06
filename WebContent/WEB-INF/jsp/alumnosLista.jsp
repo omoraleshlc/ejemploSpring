@@ -57,7 +57,7 @@ td {
 					<td><a href="delete?id=${alumnos.keyAEMain}">Eliminar</a></td>
 				</tr>
 			</c:forEach>
-			<tr><td colspan="7"><a href="register">Agregar New Alumnos</a></td></tr>
+			<tr><td colspan="7"><a href="agregarAlumnos">Agregar New Alumnos</a></td></tr>
 		</table>
 
 	</center>

@@ -33,13 +33,13 @@ public class ArticulosDaoImpl implements ArticulosDao {
         
         @Override
         public List<Articulos> getArticulosList() {
-		List articulosList = new ArrayList();
+		List ArticulosList = new ArrayList();
 
 		String sql = "select * from articulos";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		articulosList = jdbcTemplate.query(sql, new ArticulosRowMapper());
-		return articulosList;
+		ArticulosList = jdbcTemplate.query(sql, new ArticulosRowMapper());
+		return ArticulosList;
 	}
 
 	
@@ -67,9 +67,9 @@ public class ArticulosDaoImpl implements ArticulosDao {
 	}
 
 	@Override
-	public Articulos getArticulos(String id) {
+	public Articulos getArticulos(String keyAEMain) {
 		List<Articulos> articulosList = new ArrayList<Articulos>();
-		String sql = "select * from articulos where id= " + id;
+		String sql = "select * from articulos where keyAEMain= " + keyAEMain;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		articulosList = jdbcTemplate.query(sql, new ArticulosRowMapper());
 		return articulosList.get(0);
