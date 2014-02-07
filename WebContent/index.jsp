@@ -18,9 +18,11 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-<link href="images/css/bootstrap.css" rel="stylesheet" media="screen, projection">
+<link href="css/bootstrap.css" rel="stylesheet" media="screen, projection">
+    <!-- 
 <link href="images/css/bootstrap.min.css" rel="stylesheet">
 <link href="images/js/bootstrap.js" rel="stylesheet">
+    -->
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -73,6 +75,16 @@
 
     <div class="container">
      
+        <table class="table table-condensed table-striped">
+            <tr>
+                <td>
+                    a
+                </td>
+            </tr>
+            
+        </table>
+        
+        
       <form class="form-signin" action="login.jsp" method="POST">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" class="input-block-level" name="email" placeholder="Email address">
