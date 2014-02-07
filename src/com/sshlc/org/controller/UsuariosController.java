@@ -59,7 +59,7 @@ public class UsuariosController {
 	}
 
 	@RequestMapping("/getList")
-	public ModelAndView getUsuariosLIst() {
+	public ModelAndView getUsuariosList() {
 		List<Usuarios> usuariosList = usuariosService.getUsuariosList();
 		return new ModelAndView("usuariosList", "usuariosList", usuariosList);
 	}

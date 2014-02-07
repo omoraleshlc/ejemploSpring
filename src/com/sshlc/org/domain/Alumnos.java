@@ -2,23 +2,23 @@ package com.sshlc.org.domain;
 
 public class Alumnos {
 
-	private Integer keyAEMain;
+	private int keyAEMain;
 	private String escuela;
-	private String matricula;
+	private Integer matricula;
 	private String nombre;
 	private String tipoAlumno;
 
     /**
      * @return the keyAEMain
      */
-    public Integer getKeyAEMain() {
+    public int getKeyAEMain() {
         return keyAEMain;
     }
 
     /**
      * @param keyAEMain the keyAEMain to set
      */
-    public void setKeyAEMain(Integer keyAEMain) {
+    public void setKeyAEMain(int keyAEMain) {
         this.keyAEMain = keyAEMain;
     }
 
@@ -36,19 +36,7 @@ public class Alumnos {
         this.escuela = escuela;
     }
 
-    /**
-     * @return the matricula
-     */
-    public String getMatricula() {
-        return matricula;
-    }
 
-    /**
-     * @param matricula the matricula to set
-     */
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
 
     /**
      * @return the nombre
@@ -76,6 +64,20 @@ public class Alumnos {
      */
     public void setTipoAlumno(String tipoAlumno) {
         this.tipoAlumno = tipoAlumno;
+    }
+
+    /**
+     * @return the matricula
+     */
+    public Integer getMatricula() {
+        return matricula;
+    }
+
+    /**
+     * @param matricula the matricula to set
+     */
+    public void setMatricula(Integer matricula) {
+        this.matricula = matricula;
     }
         
         

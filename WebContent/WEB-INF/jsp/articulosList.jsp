@@ -30,6 +30,9 @@ td {
 </style>
 </head>
 <body>
+     <%@include file="menu.jsp" %>
+    
+    
 	<center>
 		<br /> <br /> <br /> <b>Articuloses
 			Lista | </b><br /> <br />
@@ -41,6 +44,8 @@ td {
 				<td class="heading">#Mov</td>
 				<td class="heading">Descripcion</td>
 				<td class="heading">Sustancia</td>
+                                <td class="heading"></td>
+                                <td class="heading"></td>
 				
 			</tr>
 			<c:forEach var="articulos" items="${articulosList}">

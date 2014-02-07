@@ -16,7 +16,7 @@ public class AlumnosExtractor implements ResultSetExtractor<Alumnos> {
 		
 		alumnos.setKeyAEMain(resultSet.getInt("keyAEMain"));
 		alumnos.setEscuela(resultSet.getString("escuela"));
-		alumnos.setMatricula(resultSet.getString("matricula"));
+		alumnos.setMatricula(resultSet.getInt("matricula"));
 		alumnos.setNombre(resultSet.getString("nombre"));
 		alumnos.setTipoAlumno(resultSet.getString("tipoAlumno"));
                

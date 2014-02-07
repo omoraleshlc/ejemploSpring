@@ -34,13 +34,16 @@ public class AlumnosDaoImpl implements AlumnosDao {
         @Override
         public List<Alumnos> getAlumnosList() {
 		List alumnosList = new ArrayList();
-
+                
 		String sql = "select * from alumnos";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		alumnosList = jdbcTemplate.query(sql, new AlumnosRowMapper());
+                
 		return alumnosList;
 	}
+        
+        
 
 	
         

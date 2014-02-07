@@ -30,6 +30,9 @@ td {
 </style>
 </head>
 <body>
+    
+    
+     <%@include file="menu.jsp" %>
 	<center>
 		<br /> <br /> <br /> <b>Alumnos
 			Lista | </b><br /> <br />
@@ -47,10 +50,10 @@ td {
 			</tr>
 			<c:forEach var="alumnos" items="${alumnosList}">
 				<tr>
-					<td>${alumnos.keyAEMain}</td>
+					
 					<td>${alumnos.nombre}</td>
 					<td>${alumnos.escuela}</td>
-                                        <td>${alumnos.carrera}</td>
+                                        <td>${alumnos.matricula}</td>
                                         <td>${alumnos.tipoAlumno}</td>
 					
 					<td><a href="edit?id=${alumnos.keyAEMain}">Editar</a></td>

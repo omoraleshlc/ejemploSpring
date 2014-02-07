@@ -56,7 +56,7 @@ public class AlumnosController {
 		return "redirect:/getList";
 	}
 
-	@RequestMapping("/getListaAlumnos")
+	@RequestMapping("/listaAlumnos")
 	public ModelAndView getAlumnosList() {
 		List<Alumnos> alumnosList = alumnosService.getAlumnosList();
 		return new ModelAndView("alumnosLista", "alumnosLista", alumnosList);
