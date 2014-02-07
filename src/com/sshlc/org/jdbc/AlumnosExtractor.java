@@ -8,8 +8,8 @@ import com.sshlc.org.domain.Alumnos;
 
 public class AlumnosExtractor implements ResultSetExtractor<Alumnos> {
 
-        @Override
-	public Alumnos extractData(ResultSet resultSet) throws SQLException,
+    @Override
+    public Alumnos extractData(ResultSet resultSet) throws SQLException,
 			DataAccessException {
 		
 		Alumnos alumnos = new Alumnos();
@@ -18,8 +18,7 @@ public class AlumnosExtractor implements ResultSetExtractor<Alumnos> {
 		alumnos.setEscuela(resultSet.getString("escuela"));
 		alumnos.setMatricula(resultSet.getInt("matricula"));
 		alumnos.setNombre(resultSet.getString("nombre"));
-		alumnos.setTipoAlumno(resultSet.getString("tipoAlumno"));
-               
+                alumnos.setTipoAlumno(resultSet.getString("tipoAlumno"));
 		
 		return alumnos;
 	}

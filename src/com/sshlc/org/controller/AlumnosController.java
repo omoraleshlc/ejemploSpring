@@ -27,43 +27,45 @@ public class AlumnosController {
 	@RequestMapping("/registrarAlumnos")
 	public ModelAndView registerAlumnos(@ModelAttribute Alumnos alumnos) {
 
-		List<String> alList = new ArrayList<String>();
-                alList.add("escuela");
-                alList.add("matricula");
-                alList.add("nombre");
-                alList.add("tipoAlumno");
-                alList.add("keyAEMain");
-		
-		
+		List<String> genderList = new ArrayList<String>();
+		genderList.add("male");
+		genderList.add("female");
                 
+                List<String> estadoList = new ArrayList<String>();
+		estadoList.add("Nuevo Leon");
+		estadoList.add("Tamaulipas");
+		estadoList.add("Veracruz");
+		estadoList.add("Chiapas");
                 
+
+		List<String> cityList = new ArrayList<String>();
+		cityList.add("delhi");
+		cityList.add("gurgaon");
+		cityList.add("meerut");
+		cityList.add("noida");
 
 		Map<String, List> map = new HashMap<String, List>();
-		map.put("keyAEMain", alList);
-                map.put("escuela", alList);
-                map.put("nombre", alList);
-                map.put("tipoAlumno", alList);
-                map.put("matricula", alList);
-                
-		
-		return new ModelAndView("registrarAlumnos", "map", map);
+		map.put("genderList", genderList);
+		map.put("cityList", cityList);
+                map.put("estadoList", estadoList);
+		return new ModelAndView("register", "map", map);
 	}
 
-	@RequestMapping("/insertarAlumnos")
+	@RequestMapping("/agregarAlumnos")
 	public String inserData(@ModelAttribute Alumnos alumnos) {
 		if (alumnos != null)
 			alumnosService.insertData(alumnos);
 		return "redirect:/getList";
 	}
 
-	@RequestMapping("/listaAlumnos")
+	@RequestMapping("/listarAlumnos")
 	public ModelAndView getAlumnosList() {
 		List<Alumnos> alumnosList = alumnosService.getAlumnosList();
 		return new ModelAndView("alumnosLista", "alumnosLista", alumnosList);
 	}
 
 	@RequestMapping("/editarAlumnos")
-	public ModelAndView editAlumnos(@RequestParam Integer keyAEMain,
+	public ModelAndView editAlumnos(@RequestParam int keyAEMain,
 			@ModelAttribute Alumnos alumnos) {
 
 		alumnos = alumnosService.getAlumnos(keyAEMain);
@@ -92,21 +94,21 @@ public class AlumnosController {
 		map.put("alumnos", alumnos);
                 map.put("estado", estadoList);
 
-		return new ModelAndView("ediarAlumnos", "map", map);
+		return new ModelAndView("editarAlumnos", "map", map);
 
 	}
 
-	@RequestMapping("/actualizaAlumnos")
+	@RequestMapping("/actualizarAlumnos")
 	public String updateAlumnos(@ModelAttribute Alumnos alumnos) {
 		alumnosService.updateData(alumnos);
-		return "redirect:/getLista";
+		return "redirect:/getList";
 
 	}
 
-	@RequestMapping("/borraAlumnos")
-	public String deleteAlumnos(@RequestParam Integer keyAEMain) {
-		System.out.println("keyAEMain = " + keyAEMain);
-		alumnosService.deleteData(keyAEMain);
-		return "redirect:/getListaAlumnos";
+	@RequestMapping("/eliminarAlumnos")
+	public String deleteAlumnos(@RequestParam int folio) {
+		System.out.println("folio = " + folio);
+		alumnosService.deleteData(folio);
+		return "redirect:/getList";
 	}
 }

@@ -48,7 +48,7 @@ td {
                                 <td class="heading">TipoAlumno</td>
 				
 			</tr>
-			<c:forEach var="alumnos" items="${alumnosList}">
+			<c:forEach var="alumnos" items="${alumnosLista}">
 				<tr>
 					
 					<td>${alumnos.nombre}</td>

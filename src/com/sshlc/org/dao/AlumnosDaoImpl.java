@@ -17,38 +17,29 @@ public class AlumnosDaoImpl implements AlumnosDao {
 	public void insertData(Alumnos alumnos) {
 
 		String sql = "INSERT INTO alumnos "
-				+ "(descripcion,descripcion1) VALUES (?, ?)";
+				+ "(escuela,matricula, nombre, tipoAlumno) VALUES (?, ?, ?, ?)";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
 		jdbcTemplate.update(
 				sql,
-				new Object[] { alumnos.getEscuela(), alumnos.getMatricula(),alumnos.getNombre(),
-						alumnos.getTipoAlumno(),alumnos.getKeyAEMain() });
+				new Object[] { alumnos.getEscuela(), alumnos.getMatricula(),
+						alumnos.getNombre(),alumnos.getTipoAlumno() });
 
 	}
 
-	
-        
-        
         @Override
-        public List<Alumnos> getAlumnosList() {
+	public List<Alumnos> getAlumnosList() {
 		List alumnosList = new ArrayList();
-                
+
 		String sql = "select * from alumnos";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		alumnosList = jdbcTemplate.query(sql, new AlumnosRowMapper());
-                
 		return alumnosList;
 	}
-        
-        
 
-	
-        
-        
-        @Override
+	@Override
 	public void deleteData(Integer keyAEMain) {
 		String sql = "delete from alumnos where keyAEMain=" + keyAEMain;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
@@ -58,14 +49,19 @@ public class AlumnosDaoImpl implements AlumnosDao {
 
 	@Override
 	public void updateData(Alumnos alumnos) {
-
-		String sql = "UPDATE alumnos set matricula = ?,nombre = ?,escuela = ?,tipoAlumno=? where keyAEMain = ?";
+                Integer keyAEMain=alumnos.getKeyAEMain();
+                //List<Alumnos> alumnosList = new ArrayList<Alumnos>();
+                
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-
+		String sql = "UPDATE alumnos set usuario = ?,nombre = ? where keyAEMain= " + keyAEMain;
+    	
+                
 		jdbcTemplate.update(
 				sql,
 				new Object[] { alumnos.getEscuela(), alumnos.getMatricula(),alumnos.getNombre(),
-						alumnos.getTipoAlumno(), alumnos.getKeyAEMain() });
+                                    alumnos.getTipoAlumno()
+                                     
+						});
 
 	}
 
