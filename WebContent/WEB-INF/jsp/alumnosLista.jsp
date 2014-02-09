@@ -6,63 +6,48 @@
 <html>
 <head>
 <title>Lista de Alumnos</title>
-<style>
-body {
-	font-size: 20px;
-	color: teal;
-	font-family: Calibri;
-}
 
-td {
-	font-size: 15px;
-	color: black;
-	width: 100px;
-	height: 22px;
-	text-align: center;
-}
-.heading {
-	font-size: 18px;
-	color: white;
-	font: bold;
-	background-color: orange;
-	border: thick;
-}
-</style>
 </head>
 <body>
     
     
      <%@include file="menu.jsp" %>
+     
+     <div class="container">
 	<center>
 		<br /> <br /> <br /> <b>Alumnos
 			Lista | </b><br /> <br />
 			
 		
 
-		<table border="1">
+		<table class="table table-striped table-hover">
+                    <thead class="success">
 			<tr>
-				<td class="heading">#Mov</td>
-				<td class="heading">Nombre</td>
-				<td class="heading">Escuela</td>
-                                <td class="heading">Carrera</td>
-                                <td class="heading">TipoAlumno</td>
+				<td >#Mov</td>
+				<td >Nombre</td>
+				<td >Escuela</td>
+                                <td >Carrera</td>
+                                <td >TipoAlumno</td>
+                                
 				
 			</tr>
+                    </thead>
 			<c:forEach var="alumnos" items="${alumnosLista}">
 				<tr>
+				<td><small>${alumnos.keyAEMain}</small></td>	
+                                    <td><small>${alumnos.nombre}</small></td>
+                                    <td><small>${alumnos.escuela}</small></td>
+                                    <td><small>${alumnos.matricula}</small></td>
+                                    <td><small>${alumnos.tipoAlumno}</small></td>
 					
-					<td>${alumnos.nombre}</td>
-					<td>${alumnos.escuela}</td>
-                                        <td>${alumnos.matricula}</td>
-                                        <td>${alumnos.tipoAlumno}</td>
-					
-					<td><a href="edit?id=${alumnos.keyAEMain}">Editar</a></td>
-					<td><a href="delete?id=${alumnos.keyAEMain}">Eliminar</a></td>
+                                    <td><small><a href="edit?id=${alumnos.keyAEMain}">Editar</a></small></td>
+                                    <td><small><a href="delete?id=${alumnos.keyAEMain}">Eliminar</a></small></td>
 				</tr>
 			</c:forEach>
 			<tr><td colspan="7"><a href="agregarAlumnos">Agregar New Alumnos</a></td></tr>
 		</table>
 
 	</center>
+</div>
 </body>
 </html>

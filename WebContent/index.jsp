@@ -17,12 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-<link href="css/bootstrap.css" rel="stylesheet" media="screen, projection">
-    <!-- 
-<link href="images/css/bootstrap.min.css" rel="stylesheet">
-<link href="images/js/bootstrap.js" rel="stylesheet">
-    -->
+
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -69,6 +64,14 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+                                   
+                                   
+      <!-- Le styles -->
+<link href="images/css/bootstrap.css" rel="stylesheet" media="screen, projection">
+
+<link href="images/css/bootstrap.min.css" rel="stylesheet">
+<link href="images/js/bootstrap.js" rel="stylesheet">
+                                
   </head>
 
   <body>

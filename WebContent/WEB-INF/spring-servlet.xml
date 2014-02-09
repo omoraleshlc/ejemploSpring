@@ -15,8 +15,7 @@
     <mvc:resources mapping="/images/**" location="/images/" />
     <mvc:resources mapping="/img/**" location="/img/" />
     <mvc:resources mapping="/js/**" location="/js/" />
-    
-    
+    <mvc:annotation-driven />
 
 	<!-- telling container to take care of annotations stuff -->
 	<context:annotation-config />
