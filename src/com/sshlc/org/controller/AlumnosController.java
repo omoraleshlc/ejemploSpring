@@ -48,14 +48,14 @@ public class AlumnosController {
 		map.put("genderList", genderList);
 		map.put("cityList", cityList);
                 map.put("estadoList", estadoList);
-		return new ModelAndView("register", "map", map);
+		return new ModelAndView("agregarAlumnos", "map", map);
 	}
 
 	@RequestMapping("/agregarAlumnos")
 	public String inserData(@ModelAttribute Alumnos alumnos) {
 		if (alumnos != null)
 			alumnosService.insertData(alumnos);
-		return "redirect:/getList";
+		return "redirect:/listarAlumnos";
 	}
 
 	@RequestMapping("/listarAlumnos")
@@ -101,14 +101,15 @@ public class AlumnosController {
 	@RequestMapping("/actualizarAlumnos")
 	public String updateAlumnos(@ModelAttribute Alumnos alumnos) {
 		alumnosService.updateData(alumnos);
-		return "redirect:/getList";
+		return "redirect:/listarAlumnos";
 
 	}
 
 	@RequestMapping("/eliminarAlumnos")
-	public String deleteAlumnos(@RequestParam int folio) {
-		System.out.println("folio = " + folio);
-		alumnosService.deleteData(folio);
-		return "redirect:/getList";
+	public String deleteAlumnos(@RequestParam int keyAEMain) {
+		System.out.println("keyAEMain = " + keyAEMain);//Imprimir en consola
+                //out.println("<script>window.alert('SE ELIMINO');</script>");
+		alumnosService.deleteData(keyAEMain);
+		return "redirect:/listarAlumnos";
 	}
 }

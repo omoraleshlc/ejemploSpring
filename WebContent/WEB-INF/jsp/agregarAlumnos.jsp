@@ -13,11 +13,11 @@
 		<br /> <br /> <br /> <h1 class="jumbotron">Agregar Alumnos</h1> <br />
 		<br />
 		<div>
-			<form:form method="post" action="/insertarAlumnos" modelAttribute="alumnos">
+			<form:form method="post" action="/agregarAlumnos" modelAttribute="alumnos">
 				<table class="table table-condensed table-hover">
 					<tr>
 						<td>Nombre :</td>
-						<td><form:input path="firstName" /></td>
+						<td><form:input path="nombre" /></td>
 					</tr>
 					<tr>
 						<td>Escuela :</td>

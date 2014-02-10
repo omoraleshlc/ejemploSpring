@@ -5,7 +5,7 @@ import java.util.List;
 import com.sshlc.org.domain.Alumnos;
 
 public interface AlumnosService {
-	public void insertData(Alumnos articulos);
+	public void insertData(Alumnos alumnos);
 
 	public List<Alumnos> getAlumnosList();
 
@@ -13,5 +13,5 @@ public interface AlumnosService {
 
 	public Alumnos getAlumnos(Integer keyAEMain);
 
-	public void updateData(Alumnos articulos);
+	public void updateData(Alumnos alumnos);
 }

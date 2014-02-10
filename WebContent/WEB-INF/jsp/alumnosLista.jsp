@@ -40,11 +40,11 @@
                                     <td><small>${alumnos.matricula}</small></td>
                                     <td><small>${alumnos.tipoAlumno}</small></td>
 					
-                                    <td><small><a href="edit?id=${alumnos.keyAEMain}">Editar</a></small></td>
-                                    <td><small><a href="delete?id=${alumnos.keyAEMain}">Eliminar</a></small></td>
+                                    <td><small><a href="actualizarAlumnos?keyAEMain=${alumnos.keyAEMain}">Editar</a></small></td>
+                                    <td><small><a href="eliminarAlumnos?keyAEMain=${alumnos.keyAEMain}">Eliminar</a></small></td>
 				</tr>
 			</c:forEach>
-			<tr><td colspan="7"><a href="agregarAlumnos">Agregar New Alumnos</a></td></tr>
+			<tr><td colspan="7"><a href="registrarAlumnos">Agregar New Alumnos</a></td></tr>
 		</table>
 
 	</center>
