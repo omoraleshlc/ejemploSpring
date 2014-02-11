@@ -97,11 +97,15 @@ public class AlumnosController {
 		return new ModelAndView("editarAlumnos", "map", map);
 
 	}
+        
+        
+        
+        
 
 	@RequestMapping("/actualizarAlumnos")
 	public String updateAlumnos(@ModelAttribute Alumnos alumnos) {
 		alumnosService.updateData(alumnos);
-		return "redirect:/listarAlumnos";
+		return "redirect:/editarAlumnos";
 
 	}
 

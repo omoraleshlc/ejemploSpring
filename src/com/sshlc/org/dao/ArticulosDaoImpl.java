@@ -67,9 +67,9 @@ public class ArticulosDaoImpl implements ArticulosDao {
 	}
 
 	@Override
-	public Articulos getArticulos(String keyAEMain) {
+	public Articulos getArticulos(String keyPA) {
 		List<Articulos> articulosList = new ArrayList<Articulos>();
-		String sql = "select * from articulos where keyAEMain= " + keyAEMain;
+		String sql = "select * from articulos where keyPA= " + keyPA;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		articulosList = jdbcTemplate.query(sql, new ArticulosRowMapper());
 		return articulosList.get(0);

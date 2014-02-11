@@ -3,40 +3,42 @@
 
 <html>
 <head>
-<title>Being Java Guys | Spring DI Hello World</title>
+<title>Catalogo de Articulos</title>
 
 </head>
+
+<%@include file="menu.jsp" %>
 <body>
     
     <div class="container">
 	<center>
-		<br /> <br /> <br /> <h1 class="jumbotron">Being Java Guys | Registration Form </h1> <br />
+		<br /> <br /> <br /> <h1 >Alta de Articulos</h1> <br />
 		<br />
 		<div>
-			<form:form method="post" action="/insert" modelAttribute="usuarios">
+			<form:form method="post" action="/insert" modelAttribute="articulos">
+                            
+                            <form:select path="usuarios" />
 				<table class="table table-condensed table-hover">
 					<tr>
-						<td>Folio :</td>
-						<td><form:input path="folio" /></td>
+						<td>Descripcion :</td>
+						<td><form:input path="descripcion" /></td>
 					</tr>
 					<tr>
-						<td>Usuario :</td>
-						<td><form:input path="usuario" /></td>
+						<td>Sustancia :</td>
+						<td><form:input path="descripcion1" /></td>
 					</tr>
-					<tr>
-						<td>Nombre:</td>
-						<td><form:input path="nombre" /></td>
-					</tr>
+					
                                         
 					<tr>
 						<td>&nbsp;</td>
-						<td><input type="submit" value="Save" /></td>
+						<td><button class="btn btn-primary btn-sm" type="submit" value="Guardar" name="send"/> Guardar</button></td>
 					</tr>
 					<tr>
 						
-						<td colspan="2"><a href="getList">Click Here to See User List</a></td>
+						<td colspan="2"><a href="getList">Agregar</a></td>
 					</tr>
 				</table>
+                                        <form:hidden path="keyPA" />
 			</form:form>
 		</div>
 	</center>

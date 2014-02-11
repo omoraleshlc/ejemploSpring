@@ -34,11 +34,7 @@ td {
 		<div>
 			<form:form method="post" action="/actualizarAlumnos" modelAttribute="alumnos">
 				<table>					
-					<tr>
-						<td>Usuario :</td>
-						<td><form:input path="usuario" value="${map.alumnos.usuario}" />
-						</td>
-					</tr>
+					
 					
                                         	<tr>
 						<td>Nombre :</td>
@@ -52,7 +48,7 @@ td {
 						</td>
 					</tr>
 				</table>
-				<form:hidden path="folio" value="${map.usuarios.folio}" />
+				
 
 			</form:form>
 		</div>

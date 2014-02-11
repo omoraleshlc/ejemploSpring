@@ -6,61 +6,47 @@
 <html>
 <head>
 <title>Lista de Articulos</title>
-<style>
-body {
-	font-size: 20px;
-	color: teal;
-	font-family: Calibri;
-}
 
-td {
-	font-size: 15px;
-	color: black;
-	width: 100px;
-	height: 22px;
-	text-align: center;
-}
-.heading {
-	font-size: 18px;
-	color: white;
-	font: bold;
-	background-color: orange;
-	border: thick;
-}
-</style>
 </head>
 <body>
      <%@include file="menu.jsp" %>
     
-    
+     <div class="container">
 	<center>
 		<br /> <br /> <br /> <b>Articuloses
 			Lista | </b><br /> <br />
 			
 		
-
-		<table border="1">
-			<tr>
-				<td class="heading">#Mov</td>
-				<td class="heading">Descripcion</td>
-				<td class="heading">Sustancia</td>
-                                <td class="heading"></td>
-                                <td class="heading"></td>
+                <% int numeracion=0;%>
+		<table class="table table-striped table-hover">
+			<thead >
+                                <td >#</td>
+				<td >Mov</td>
+				<td >Descripcion</td>
+				<td >Sustancia</td>
+                                <td ></td>
+                                <td ></td>
 				
-			</tr>
+			</thead>
+                        
 			<c:forEach var="articulos" items="${articulosList}">
 				<tr>
-					<td>${articulos.keyPA}</td>
-					<td>${articulos.descripcion}</td>
-					<td>${articulos.descripcion1}</td>
+                                        <td><small><% 
+                                        numeracion+=1;
+                                        out.println(numeracion);                                        
+                                        %></small></td>
+					<td><small>${articulos.keyPA}</small></td>
+					<td><small>${articulos.descripcion}</small></td>
+					<td><small>${articulos.descripcion1}</small></td>
 					
-					<td><a href="editar?keyPA=${articulos.keyPA}">Editar</a></td>
-					<td><a href="delete?keyPA=${articulos.keyPA}">Eliminar</a></td>
+					<td><small><a href="editarArticulos?keyPA=${articulos.keyPA}">Editar</a></small></td>
+					<td><small><a href="eliminarArticulos?keyPA=${articulos.keyPA}">Eliminar</a></small></td>
 				</tr>
 			</c:forEach>
-			<tr><td colspan="7"><a href="register">Agregar New Articulos</a></td></tr>
+			<tr><td colspan="7"><small><a href="register">Agregar Articulos</a></small></td></tr>
 		</table>
 
 	</center>
+     </div>
 </body>
 </html>

@@ -49,17 +49,17 @@ public class AlumnosDaoImpl implements AlumnosDao {
 
 	@Override
 	public void updateData(Alumnos alumnos) {
-                Integer keyAEMain=alumnos.getKeyAEMain();
+                //Integer keyAEMain=alumnos.getKeyAEMain();
                 //List<Alumnos> alumnosList = new ArrayList<Alumnos>();
                 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		String sql = "UPDATE alumnos set usuario = ?,nombre = ? where keyAEMain= " + keyAEMain;
+		String sql = "UPDATE alumnos set nombre = ? where keyAEMain= ? ";
     	
                 
 		jdbcTemplate.update(
 				sql,
-				new Object[] { alumnos.getEscuela(), alumnos.getMatricula(),alumnos.getNombre(),
-                                    alumnos.getTipoAlumno()
+				new Object[] { alumnos.getNombre(),
+                                    alumnos.getKeyAEMain()
                                      
 						});
 

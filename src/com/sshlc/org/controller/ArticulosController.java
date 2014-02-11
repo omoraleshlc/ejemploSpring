@@ -48,11 +48,12 @@ public class ArticulosController {
 
 	@RequestMapping("/getListaArticulos")
 	public ModelAndView getArticulosList() {
+            int numeracion=0;
 		List<Articulos> articulosList = articulosService.getArticulosList();
 		return new ModelAndView("articulosList", "articulosList", articulosList);
 	}
 
-	@RequestMapping("/editar")
+	@RequestMapping("/editarArticulos")
 	public ModelAndView editArticulos(@RequestParam String keyPA,
 			@ModelAttribute Articulos articulos) {
 
@@ -82,18 +83,18 @@ public class ArticulosController {
 		map.put("articulos", articulos);
                 map.put("estado", estadoList);
 
-		return new ModelAndView("editar", "map", map);
+		return new ModelAndView("editarArticulos", "map", map);
 
 	}
 
-	@RequestMapping("/updates")
+	@RequestMapping("/actualizarArticulos")
 	public String updateArticulos(@ModelAttribute Articulos articulos) {
 		articulosService.updateData(articulos);
 		return "redirect:/getList";
 
 	}
 
-	@RequestMapping("/deletes")
+	@RequestMapping("/eliminarArticulos")
 	public String deleteArticulos(@RequestParam String id) {
 		System.out.println("id = " + id);
 		articulosService.deleteData(id);

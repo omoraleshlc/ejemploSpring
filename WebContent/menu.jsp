@@ -33,8 +33,8 @@
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://expo.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);">Editar Perfil <span class="glyphicon glyphicon-user"></span></a></li>
-        <li><a href="http://blog.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);">Cerrar Session <span class="glyphicon glyphicon-log-out"></span></a></li>
+        <li><a href="editar.jsp" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);">Editar Perfil <span class="glyphicon glyphicon-user"></span></a></li>
+        <li><a href="index.jsp" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);">Cerrar Session <span class="glyphicon glyphicon-log-out"></span></a></li>
       </ul>
     </nav>
   </div>

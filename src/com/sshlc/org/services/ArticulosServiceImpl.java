@@ -29,8 +29,8 @@ public class ArticulosServiceImpl implements ArticulosService {
 	}
 
 	@Override
-	public Articulos getArticulos(String id) {
-		return articulosdao.getArticulos(id);
+	public Articulos getArticulos(String keyPA) {
+		return articulosdao.getArticulos(keyPA);
 	}
 
 	@Override
